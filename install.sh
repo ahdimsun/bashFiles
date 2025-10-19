@@ -1,10 +1,7 @@
 removeInstall() {
-    sudo apt remove -y libreoffice-common yelp firefox-esr 
+    sudo apt remove -y firefox-esr evolution gnome-text-editor gnome-calculator yelp gnome-contacts gnome-calendar gnome-weather gnome-clocks gnome-maps libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-writer shotwell gnome-sound-recorder gnome-music simple-scan totem gnome-snapshot gnome-characters gnome-tour seahorse evince gnome-connections gnome-disk-utility gnome-logs malcontent-gui gnome-system-monitor loupe baobab libreoffice-common
 }
 
-removeInstallAuto() {
-    sudo apt autoremove -y
-}
 loadSetting() {
     dconf load / < gnome-settings-backup.ini
 }
@@ -64,7 +61,7 @@ rm -rf ./anki-launcher-25.09-linux
 }
 
 removeInstall
-removeInstallAuto
+sudo apt autoremove -y
 sudo apt update
 sudo apt upgrade -y
 sudo apt install ./obsidian_1.9.14_amd64.deb
